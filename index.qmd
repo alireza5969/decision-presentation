@@ -36,6 +36,8 @@ To find out how much work an AI screener can take off a reviewer's desk **before
 - Humans read every single one of the rest. Takes weeks to months.
 :::
 
+![](img/burden.png){.fragment .fade-in data-fragment-index="3"}
+
 ---
 
 ## The idea in one picture
