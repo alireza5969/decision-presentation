@@ -76,7 +76,7 @@ flowchart LR
   F --> G
 ```
 
-I programmatically retrieve PMC systematic reviews → You extract → I run the models → I do the analysis → We publish two thigs:
+I programmatically retrieve PMC systematic reviews → You extract → I run the models → I do the analysis → I (probably) write the paper → We publish two thigs:
 
 * A paper of our findings
 * A big beautiful dataset with its own DOI
@@ -146,7 +146,7 @@ This study measures AI. A hallucinated number in our dataset becomes a hallucina
 ::: {.incremental}
 - **Got a decent GPU?** Lend me its computational power. 
 - **No decent GPU?** We all need to chip in toward renting one. 
-- **Be responsive and active.** Silence for two weeks is not a "work style". I need to see your `git commit`s your communication inside the group chat.
+- **Be responsive and active.** Silence for two weeks is not a "work style". I need to see your `git commit`s & your communication inside the group chat.
 - **Send feedback.** The design is not perfect. There's room for improvement. For example, which keywords should be highlighted in the HTML files to make your job easier. 
 :::
 
@@ -156,10 +156,10 @@ This study measures AI. A hallucinated number in our dataset becomes a hallucina
 
 - The collaborator who puts in the **most work** becomes **co-first author**. At least x2 of the rest. 
 - Everyone else who labels becomes an **author** (Dah!).
-- I am the **other co-first author and the corresponding author**.
+- I am the **other co-first and the corresponding author**.
 - Probably two faculty members, from the US and Canada, will join.
 
-You can call me **<u>anytime, day or night</u>**. I won't call you anytime, unless you want.
+You can call me **<u>anytime, day and night</u>**. I won't call you anytime, unless you want.
 
 ---
 
