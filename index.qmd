@@ -1,0 +1,320 @@
+---
+title: "Comparing the performance of System One AI models with human classifiers in systematic review primary screening"
+subtitle: "Collaborator kickoff"
+author: "Sadegh"
+format:
+  revealjs:
+    theme: [custom.scss]
+    slide-number: true
+    transition: fade
+    background-transition: none
+    incremental: false
+    code-line-numbers: false
+    code-copy: true
+    preview-links: auto
+    footer: "Collaborator tutorial"
+    embed-resources: false
+    fig-responsive: false
+---
+
+<!--
+  Optional custom.scss (put it next to this file). If you don't want it,
+  change `theme: [simple, custom.scss]` above to `theme: simple`.
+
+  /*-- scss:rules --*/
+  .reveal img { max-height: 420px; }
+  .reveal blockquote { font-size: 0.85em; }
+-->
+
+## Why you are here {.smaller}
+
+To find out how much work an AI screener can take off a reviewer's desk **before it throws away a paper that should have stayed**.
+
+::: {.incremental}
+- Systematic reviews start with thousands of PubMed records.
+- Only a tiny handful survive to the final review.
+- Humans read every single one of the rest. Takes weeks to months.
+:::
+
+---
+
+## The idea in one picture
+
+Finding the included papers among thousands of records is a **rare-event problem**. Same family as fraud detection, or screening for a rare disease.
+
+- Most records are irrelevant (like the healthy population in rare disease case).
+- A few records matter (the rare disease).
+- Missing one of them is far worse than reading ten extra.
+
+So the question is not "how accurate is the model?" It is:
+
+_> How many records can a model **remove**, before it removes a paper that is supposed to be in the final review?_
+
+---
+
+::: {.callout-important}
+## Accuracy is worth shit in our case
+
+Accuracy is a useless metric here. A model that rejects everything is 99% accurate and 100% useless. Say this out loud, it gets a laugh and it's true.
+:::
+
+---
+
+## How the study works
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '20px'}}}%%
+%%| fig-width: 9
+flowchart LR
+  A[Published systematic review] --> B[You extract three things]
+  B --> C[PubMed search syntax]
+  B --> D[Number of raw PubMed records]
+  B --> E[Final included records]
+  C --> F[System One models screen the records<br/>using the review's own eligibility criteria]
+  D --> F
+  E --> G[Compare: what was removed vs. what should have stayed]
+  F --> G
+```
+
+I programmatically retrieve PMC systematic reviews → You extract → I run the models → I do the analysis → We publish two thigs:
+
+* A paper of our findings
+* A big beautiful dataset with its own DOI
+
+---
+
+## System One models
+
+Decision models, not chatting models: e.g. `Jev`, `Tev1`, `Nimble`, `Clef`, `Clef-flash`, and friends.
+
+::: {.incremental}
+- **Cheap** to maintain and run.
+- **One pass per request.** 
+- **Fast:** up to 100 decisions per minute. If you think LLMs are fast, wait to see these!
+:::
+
+---
+
+## Why does time matter
+
+[About **90% of this project's value** comes from one thing: being the first published paper on this question in the world.]{.mark}
+
+Nobody remembers the second team to do anything. Who landed the second on the moon? Literally just a few seconds after Neil Armstrong!
+
+[**Punctuality is not a courtesy here.**]{.mark}
+
+---
+
+## Where to start before the start?
+
+- [x] Listen to the voice messages I sent you on Telegram 
+- [ ] Skim what System One models are 
+- [ ] Watch the video I recorded about how to work with `git`, `github`, and `Annotator` extension (you don't need to learn them in depth, unless you really like efficiecy!)
+
+---
+
+## Your task: data labeler {.smaller}
+
+The loop:
+
+1. Open an HTML file: an offline web page I rebuilt from a PMC article's `XML`.
+    (turned out it's illegal to download PMC articles programmatically)
+2. Label the info: `PubMed search syntax`, `number of raw PubMed records`, `final included records`.
+3. Repeat.
+
+::: {.fragment}
+Easy but repetitive. 
+I'll show you in a video.
+:::
+
+---
+
+## AI IS BAD!
+
+::: {.callout-important}
+## No AI. At all.
+
+You label everything yourself. No chatbot "just to double check the syntax". No assistant to "quickly summarize the methods section".
+:::
+
+This study measures AI. A hallucinated number in our dataset becomes a hallucinated number in our paper, and reviewers will smell it from across the room, like fish left in a hotel minibar.
+
+---
+
+## Besides labeling
+
+::: {.incremental}
+- **Got a decent GPU?** Lend me its computational power. 
+- **No decent GPU?** We all need to chip in toward renting one. 
+- **Be responsive and active.** Silence for two weeks is not a "work style". I need to see your `git commit`s your communication inside the group chat.
+- **Send feedback.** The design is not perfect. There's room for improvement. For example, which keywords should be highlighted in the HTML files to make your job easier. 
+:::
+
+---
+
+## Authorship
+
+- The collaborator who puts in the **most work** becomes **co-first author**. At least x2 of the rest. 
+- Everyone else who labels becomes an **author** (Dah!).
+- I am the **other co-first author and the corresponding author**.
+- Probably two faculty members, from the US and Canada, will join.
+
+You can call me **<u>anytime, day or night</u>**. I won't call you anytime, unless you want.
+
+---
+
+## Start working
+
+Five steps, no genius required.
+
+1. Create a GitHub account.
+2. Send me your GitHub handle so I can add you to the repository.
+3. Install Git on your machine.
+4. Connect your local Git to GitHub.
+5. Clone the project and start labeling.
+
+**what are Git and GitHub?**
+
+---
+
+## What are Git and GitHub?
+
+- **Git** is a version-control and *remote* collaboration system. It lives on your computer.
+- **GitHub** is where a Git project is stored online, so **everyone can reach the same copy**.
+
+![Local repository and remote repository](https://harshkapadia2.github.io/git_basics/static/img/git-local-remote.png){fig-alt="Diagram of a local Git repository connected to a remote repository" width="70%"}
+
+
+---
+
+## Repositories
+
+A **repository** (repo) is a project folder whose **entire** history is remembered.
+
+![How repositories relate](https://www.cs.swarthmore.edu/~adanner/help/git/git-repos.svg){fig-alt="Diagram of git repositories and how they relate" width="70%"}
+
+You work on your copy. You send your changes up. You pull everyone else's down. Nobody emails a file ever again. We don't need to talk which about versions.
+
+---
+
+## Why this is good for people with thesis scars {.smaller}
+
+
+> `thesis_final.docx` → `thesis_final_v2.docx` → `thesis_final_REALLY_final_supervisor_edits.docx` → `thesis_final_v7_use_this_one.docx`
+
+What Git does about it:
+
+::: {.incremental}
+- **One project, one true version.** No more guessing which file is the real one. There will be only one `thesis.docx` file.
+- **Every change is remembered:** who changed it, when, and why. You can go back to any earlier version.
+- **Many people can work at the same time** without *overwriting* each other.
+- **No more attachments.** Nobody mails you a "final.final.final.final.final.docx" file.
+- **Mistakes are reversible.** The undo button now goes back months, not minutes.
+:::
+
+---
+
+## Step 1 and 2: GitHub
+
+1. [Sign up on GitHub](https://github.com/signup).
+2. Send me your *GitHub handle* (mine is *github.com/alireza5969*) so I can add you to the project. The project is now private and closed-sorced, but will be made open-sources upon submission. We will publish the code and data along with the paper for the sake of reproducibility.
+
+Pick a handle you will not be embarrassed to see on a published paper's acknowledgements. `sexydoc69` is a good choice.
+
+---
+
+## Step 3: install Git
+
+[Download Git for Windows](https://git-scm.com/install/windows) (if you use MacOS or Linux, checkout `Git`'s website) and install it.
+
+- Keep the **default installation options**.
+- In particular, keep **Git Credential Manager** enabled if the installer offers it.
+
+That is it. Click "Next" like you do for everything else. 
+
+---
+
+## Step 4: connect Git to GitHub
+
+Tell Git who you are. Open a terminal (Git Bash is fine, but you can also do it with widnows' `cmd`) and run:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your-github-email@example.com"
+```
+
+Then check your email for the project invitation, open it, and click **Accept invitation**.
+
+---
+
+## Step 5: clone the project (download it in simpler termes)
+
+Pick **one** of these:
+
+::: {.incremental}
+1. The normal way:
+   `git clone https://github.com/alireza5969/decision-models-systematic-review-screening`
+2. If you authenticate with an `SSH` key (you probably don't)
+   `git clone git@github.com:alireza5969/decision-models-systematic-review-screening.git`
+3. The "I will deal with git later" way: [download the `.zip`](https://github.com/alireza5969/decision-models-systematic-review-screening/archive/refs/heads/newDownload/aws.zip) (you will have to work with `git` at the end!)
+:::
+
+---
+
+## Start labeling
+
+**Every day**, push your progress to the remote:
+
+```bash
+git add .
+git commit -m "daily labels"
+git pull
+git push
+```
+
+::: {.incremental}
+- `add .` : "include everything your changed."
+- `commit` : "save this snapshot, with a note."
+- `pull` : "get what everyone else did."
+- `push` : "send yours up."
+:::
+
+[Daily means daily. We need to get this piece to publication ASAP.]{.fragment .highlight-yellow}
+
+
+---
+
+## Recap
+
+::: {.incremental}
+1. We measure how much screening burden System One models can remove without dropping the papers that matter.
+2. You label three things per review. By hand. **No AI.**
+3. Git and GitHub keep us all on the same page.
+4. `push` every day.
+5. Speed matters. We want to be first.
+:::
+
+---
+
+
+## {.unlisted background-image="img/call_me.png" background-size="contain" background-repeat="no-repeat" background-position="center"}
+
+<div class="callme-overlay">
+
+  <div class="callme-kicker">YOU HAVE A QUESTION?</div>
+
+  <div class="callme-title">CALL<br>ME.</div>
+
+  <div class="callme-credit">ANYTIME.</div>
+
+  <div class="callme-contact">
+      Phone: +989164219471
+      Telegram: @as5969
+  </div>
+
+</div>
+
+<audio id="callme-audio" controls preload="metadata">
+  <source src="audio/call-me.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+</audio>

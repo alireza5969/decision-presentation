@@ -1,0 +1,85 @@
+/*-- scss:rules --*/
+
+.reveal img {
+  max-height: 420px;
+}
+
+.reveal blockquote {
+  font-size: 0.85em;
+}
+
+.reveal .fragment.highlight-yellow {
+  visibility: visible;
+  opacity: 1;
+}
+
+.reveal .fragment.highlight-yellow.visible {
+  background-color: #ffeb3b;
+  color: #000;
+}
+
+/* Final slide layout */
+.reveal .callme-overlay {
+  min-height: 68vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  color: white;
+  background: linear-gradient(180deg,
+      rgba(8, 8, 12, 0.88),
+      rgba(8, 8, 12, 0.49));
+  border-radius: 12px;
+}
+
+.reveal .callme-kicker {
+  font-size: 0.65em;
+  letter-spacing: 0.4em;
+  color: #ff75b5;
+  margin-bottom: 0.5em;
+}
+
+.reveal .callme-title {
+  font-size: clamp(4rem, 13vw, 8rem);
+  line-height: 0.8;
+  font-weight: 900;
+  letter-spacing: -0.07em;
+  color: #ff4f9a;
+  text-shadow: 0 0 12px #ff4f9a88,
+    0 0 35px #ff4f9a44;
+}
+
+.reveal .callme-lyric {
+  margin-top: 1.5rem;
+  font-size: clamp(0.9rem, 2vw, 1.4rem);
+  line-height: 1.6;
+  text-shadow: 0 2px 8px #000;
+}
+
+.reveal .callme-credit {
+  margin-top: 1rem;
+  font-size: 0.75em;
+  letter-spacing: 0.35em;
+  color: #ffb4d6;
+}
+
+.reveal .callme-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem 2rem;
+  margin-top: 2rem;
+  font-size: 0.65em;
+  letter-spacing: 0.04em;
+  background-color: #ffb4d6;
+}
+
+.reveal #callme-audio {
+  display: block;
+  width: min(360px, 80%);
+  height: 42px;
+  margin: 0.5rem auto 0;
+}
