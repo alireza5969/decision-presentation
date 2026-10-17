@@ -2,6 +2,8 @@
 title: "Comparing the performance of System One AI models with human classifiers in systematic review primary screening"
 subtitle: "Collaborator kickoff"
 author: "Sadegh"
+filters:
+  - colorwords.lua
 format:
   revealjs:
     theme: [custom.scss]
@@ -54,7 +56,7 @@ _> How many records can a model **remove**, before it removes a paper that is su
 
 ---
 
-::: {.callout-important}
+::: {.callout-note}
 ## Accuracy is worth shit in our case
 
 Accuracy is a useless metric here. A model that rejects everything is 99% accurate and 100% useless. Say this out loud, it gets a laugh and it's true.
@@ -136,23 +138,6 @@ I'll show you in a video.
 ### How does your side of things look like?
 
 ![data extraction format](img/extraction_format.png)
-
----
-
-## But...
-
-You won't need to extract into a spreadsheet!
-
-I've been working with a Polish JS developer to 
-prepare an `Annotator` for you. 
-
-![](img/polak.png)
-
-All you need to do is to [*highlight*]{.mark} the info. You'll get to export them all at once.
-
-. . .
-
-Let me show you
 
 ---
 
@@ -10829,6 +10814,7 @@ This study measures AI. A hallucinated number in our dataset becomes a hallucina
 - **Send feedback.** The design is not perfect. There's room for improvement. For example, which keywords should be highlighted in the HTML files to make your job easier. 
 :::
 
+
 ---
 
 ## Authorship
@@ -10899,7 +10885,7 @@ What Git does about it:
 1. [Sign up on GitHub](https://github.com/signup).
 2. Send me your *GitHub handle* (mine is `*github.com/alireza5969*`) so I can add you to the project. The project is now private and closed-sorced, but will be made open-sources upon submission. We will publish the code and data along with the paper for the sake of reproducibility.
 
-Pick a handle you will not be embarrassed to see on a published paper's acknowledgements. `sexydoc69` is a good choice.
+Pick a handle you will not be embarrassed to see on a published paper's acknowledgements. `sexydoc69` & `iLoveSadeghi` is are good choices.
 
 ---
 
@@ -10985,9 +10971,28 @@ Enter your username/handle + *Personal Access Token (PAT)*
 
 ---
 
-## Step 6: Install `Annotator`
+## Step 6: `Annotator`
 
-- You MUST have both Chrome and Firefox browsers installed on you machine.
+::: {.callout-warning}
+## FUN ALERT.
+
+You won't need to extract data into spreadsheet!
+
+:::
+
+
+I've been working with a Polish JS developer to
+prepare an `Annotator` for you.
+
+![](img/polak.png)
+
+All you need to do is to [*highlight*]{.mark} the info. You'll get to export them all at once later.
+
+---
+
+### Install `Annotator`
+
+- You MUST have both Chrome and Firefox browsers installed on you machine before Annotator. Then:
 - For Chrome, install `Annotator` from [here](https://chromewebstore.google.com/detail/annotator/lodikfcpadhmibjmhoihgedpmjlhcjol)
 - For Firefox, install `Annotator` form [here](https://addons.mozilla.org/addon/annotator)
 - Preferable, create a new profile on your browsers. I'll show you how.
@@ -10998,7 +11003,7 @@ Enter your username/handle + *Personal Access Token (PAT)*
 ## Start labeling {auto-animate=true .smaller}
 
 1. Open an `.html` file.
-2. Follow the conventions set by me and start highlighting the data: PubMed syntax + included refs.
+2. Follow the conventions set by me and start highlighting the data: PubMed syntax + included refs. (feedbacks about the conventions are welcomed)
 3. Document the reasons you exclude a paper inside the `notes/` directory, e.g. "search syntax is in figures".
 4. Export your labelings into a `json` file and put it inside the `labeling_jsons/` directory with your initials as the name, e.g. mine would be `as.json`.
 
@@ -11006,11 +11011,17 @@ Enter your username/handle + *Personal Access Token (PAT)*
 5. **Every day**, push your progress to the remote after each day of labeling:
 :::
 
-**CAUTION**: Do not erase your browser history in the meanwhil! All your extract would be gone!
+
+::: {.callout-caution}
+## Danger.
+
+Do not erase your browser history in the meanwhile! All your extract would be gone!
+
+:::
 
 ---
 
-## Start labeling {auto-animate=true .smaller .non-incremental}
+## Start labeling {auto-animate=true .smaller .nonincremental}
 
 ::: {data-id="step5"}
 5. **Every day**, push your progress to the remote after each day of labeling:
@@ -11027,12 +11038,30 @@ git push
 
 ---
 
-## Annotation process
+## Feedback: Keyword Colors {.smaller .scrollable}
+
+::: {.colorwords}
+You can [highlight]{.mark} or [changed the color]{style="color: red"} of keywords as well so they get easier to detect on first sight. You can choose from:
+
+> aliceblue, antiquewhite, aqua, aquamarine, azure, beige, bisque, black, blanchedalmond, blue, blueviolet, brown, burlywood, cadetblue, chartreuse, chocolate, coral, cornflowerblue, cornsilk, crimson, cyan, darkblue, darkcyan, darkgoldenrod, darkgray, darkgreen, darkgrey, darkkhaki, darkmagenta, darkolivegreen, darkorange, darkorchid, darkred, darksalmon, darkseagreen, darkslateblue, darkslategray, darkslategrey, darkturquoise, darkviolet, deeppink, deepskyblue, dimgray, dimgrey, dodgerblue, firebrick, floralwhite, forestgreen, fuchsia, gainsboro, ghostwhite, gold, goldenrod, gray, green, greenyellow, grey, honeydew, hotpink, indianred, indigo, ivory, khaki, lavender, lavenderblush, lawngreen, lemonchiffon, lightblue, lightcoral, lightcyan, lightgoldenrodyellow, lightgray, lightgreen, lightgrey, lightpink, lightsalmon, lightseagreen, lightskyblue, lightslategray, lightslategrey, lightsteelblue, lightyellow, lime, limegreen, linen, magenta, maroon, mediumaquamarine, mediumblue, mediumorchid, mediumpurple, mediumseagreen, mediumslateblue, mediumspringgreen, mediumturquoise, mediumvioletred, midnightblue, mintcream, mistyrose, moccasin, navajowhite, navy, oldlace, olive, olivedrab, orange, orangered, orchid, palegoldenrod, palegreen, paleturquoise, palevioletred, papayawhip, peachpuff, peru, pink, plum, powderblue, purple, rebeccapurple, red, rosybrown, royalblue, saddlebrown, salmon, sandybrown, seagreen, seashell, sienna, silver, skyblue, slateblue, slategray, slategrey, snow, springgreen, steelblue, tan, teal, thistle, tomato, turquoise, violet, wheat, white, whitesmoke, yellow, yellowgreen, transparent, currentcolor
+
+:::
+
+---
+
+## Let's do everything a few times
 
 ![](img/show-me.jpeg)
 
 ---
 
+## Due
+
+We'll start by 5k papers each and you'll have 1 month to finish.
+
+Delay = removed from the
+
+---
 
 
 ## {.unlisted background-image="img/call_me.png" background-size="contain" background-repeat="no-repeat" background-position="center"}
