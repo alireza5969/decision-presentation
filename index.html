@@ -318,7 +318,7 @@ flowchart LR
 <p>The loop:</p>
 <ol type="1">
 <li class="fragment">Open an HTML file: an offline web page I rebuilt from a PMC article’s <code>XML</code>. (turned out it’s illegal to download PMC articles programmatically)</li>
-<li class="fragment">Label the info: <code>PubMed search syntax</code>, <code>number of raw PubMed records</code>, <code>final included records</code>.</li>
+<li class="fragment">Label the info: <code>PubMed search syntax</code> (+ <code>date conducted</code>, if available), <code>number of raw PubMed records</code>, <code>final included records</code>.</li>
 <li class="fragment">Repeat.</li>
 </ol>
 <div class="fragment">
@@ -21687,6 +21687,7 @@ decision_machine_clef_flash
 <li class="fragment">Send me your GitHub handle so I can add you to the repository.</li>
 <li class="fragment">Install Git on your machine.</li>
 <li class="fragment">Connect your local Git to GitHub.</li>
+<li class="fragment">Install <code>Annotator</code> on <mark><strong>both</strong></mark> <a href="https://addons.mozilla.org/addon/annotator">Firefox</a> and <a href="https://chromewebstore.google.com/detail/annotator/lodikfcpadhmibjmhoihgedpmjlhcjol">Chrome</a>.</li>
 <li class="fragment">Clone the project and start labeling.</li>
 </ol>
 <p><strong>what are Git and GitHub?</strong></p>
@@ -21752,36 +21753,87 @@ decision_machine_clef_flash
 <li class="fragment">The “I will deal with git later” way: <a href="https://github.com/alireza5969/decision-models-systematic-review-screening/archive/refs/heads/main.zip">download the <code>.zip</code></a> (you will have to work with <code>git</code> at the end!)</li>
 </ol>
 </section>
-<section id="start-labeling" class="slide level2">
-<h2>Start labeling</h2>
-<p><strong>Every day</strong>, push your progress to the remote after each day of labeling:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb2-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"daily labels"</span></span>
-<span id="cb2-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span>
-<span id="cb2-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section class="slide level2">
+
+<p>You’ll encounter a view like this:</p>
+
+<img data-src="img/github.png" class="r-stretch"><p>This means that GitHub is asking your Git to authenticate.</p>
+<p>Enter your username/handle + <em>Personal Access Token (PAT)</em></p>
+</section>
+<section class="slide level2">
+
+<div style="display: flex; justify-content: center;">
+<p><video autoplay="" loop="" muted="" playsinline="" width="500"> <source src="img/hack.mp4" type="video/mp4"> </video></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="where-do-i-get-a-pat">Where do I get a PAT?</h3>
+
+<img data-src="img/pat1.png" class="r-stretch quarto-figure-center"><p class="caption">Go to Settings in your GH account</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/pat2.png" class="r-stretch quarto-figure-center"><p class="caption">Select Developer Settings</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/pat3.png" class="r-stretch quarto-figure-center"><p class="caption">Go to ‘fine-grained tokens’ and follow the instructions in the image</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/pat4.png" class="r-stretch quarto-figure-center"><p class="caption">Make sure you grant ‘read &amp; write’ permission for content</p></section>
+<section class="slide level2">
+
+
+<img data-src="img/pat5.png" class="r-stretch quarto-figure-center"><p class="caption">Copy and save it somewhere</p></section>
+<section id="step-6-install-annotator" class="slide level2">
+<h2>Step 6: Install <code>Annotator</code></h2>
 <ul>
-<li class="fragment"><code>add .</code> : “include everything your changed.”</li>
-<li class="fragment"><code>commit</code> : “save this snapshot, with a note.”</li>
-<li class="fragment"><code>pull</code> : “get what everyone else did.”</li>
-<li class="fragment"><code>push</code> : “send yours up.”</li>
+<li class="fragment">You MUST have both Chrome and Firefox browsers installed on you machine.</li>
+<li class="fragment">For Chrome, install <code>Annotator</code> from <a href="https://chromewebstore.google.com/detail/annotator/lodikfcpadhmibjmhoihgedpmjlhcjol">here</a></li>
+<li class="fragment">For Firefox, install <code>Annotator</code> form <a href="https://addons.mozilla.org/addon/annotator">here</a></li>
+<li class="fragment">Preferable, create a new profile on your browsers. I’ll show you how.</li>
+<li class="fragment">I’ve made friends with the developer of <code>Annotator</code>. So, don’t hesitate if you have any feedback.</li>
 </ul>
+</section>
+<section id="start-labeling" class="slide level2 smaller" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Start labeling</h2>
+<ol type="1">
+<li class="fragment">Open an <code>.html</code> file.</li>
+<li class="fragment">Follow the conventions set by me and start highlighting the data: PubMed syntax + included refs.</li>
+<li class="fragment">Document the reasons you exclude a paper inside the <code>notes/</code> directory, e.g.&nbsp;“search syntax is in figures”.</li>
+<li class="fragment">Export your labelings into a <code>json</code> file and put it inside the <code>labeling_jsons/</code> directory with your initials as the name, e.g.&nbsp;mine would be <code>as.json</code>.</li>
+</ol>
+<div data-id="step5">
+<ol start="5" type="1">
+<li class="fragment"><strong>Every day</strong>, push your progress to the remote after each day of labeling:</li>
+</ol>
+</div>
+<p><strong>CAUTION</strong>: Do not erase your browser history in the meanwhil! All your extract would be gone!</p>
+</section>
+<section id="start-labeling-1" class="slide level2 smaller non-incremental" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Start labeling</h2>
+<div data-id="step5">
+<ol start="5" type="1">
+<li class="fragment"><strong>Every day</strong>, push your progress to the remote after each day of labeling:</li>
+</ol>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy" data-id="quarto-animate-code"><code class="sourceCode bash hljs"><span id="cb2-1" class="hljs-ln-code"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb2-2" class="hljs-ln-code"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"daily labels"</span></span>
+<span id="cb2-3" class="hljs-ln-code"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span>
+<span id="cb2-4" class="hljs-ln-code"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><span class="fragment highlight-yellow" style="font-size: 30px;">Daily means daily. We need to get this piece to publication ASAP.</span></p>
 </section>
-<section id="recap" class="slide level2">
-<h2>Recap</h2>
-<ol type="1">
-<li class="fragment">We measure how much screening burden System One models can remove without dropping the papers that matter.</li>
-<li class="fragment">You label three things per review. By hand. <strong>No AI.</strong></li>
-<li class="fragment">Git and GitHub keep us all on the same page.</li>
-<li class="fragment"><code>push</code> every day.</li>
-<li class="fragment">Speed matters. We want to be first.</li>
-</ol>
-</section>
+<section id="annotation-process" class="slide level2">
+<h2>Annotation process</h2>
+
+<img data-src="img/show-me.jpeg" class="r-stretch"></section>
 <section id="section" class="slide level2 unlisted" data-background-image="img/call_me.png" data-background-size="contain" data-background-repeat="no-repeat" data-background-position="center">
 <h2></h2>
 <div class="callme-overlay">
 <div class="callme-kicker">
-YOU HAVE A QUESTION?
+<b>YOU HAVE A QUESTION?</b>
 </div>
 <div class="callme-title">
 CALL<br>ME.
@@ -21790,12 +21842,12 @@ CALL<br>ME.
 ANYTIME.
 </div>
 <div class="callme-contact">
-<pre><code>  Phone: +989164219471
-  Telegram: @as5969</code></pre>
+<pre><code>  Phone:      +989164219471
+  Telegram:   @as5969</code></pre>
 </div>
 </div>
-<audio id="callme-audio" controls="" preload="metadata">
-<source src="audio/call-me.mp3" type="audio/mpeg">
+<audio id="callme-audio" controls="" data-autoplay="" preload="auto">
+<source src="audio/call-me.mp3#t=34" type="audio/mpeg">
 <p>Your browser does not support embedded audio. </p>
 
 </audio></section>
