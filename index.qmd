@@ -159,6 +159,8 @@ I'll show you in a video.
 
 ![+ PROSPERO and published protocol](img/extraction_format.png)
 
+Some papers have **>1 PROSPERO IDs**. This could be a mistake. Make sure you highlight the one that is correct.
+
 ---
 
 ### How does the final data look like
