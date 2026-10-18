@@ -10942,7 +10942,7 @@ This is only done once:
 ``` bash
 git clone --depth 1 --filter=blob:none --sparse https://github.com/alireza5969/decision-models-systematic-review-screening
 cd repo
-git sparse-checkout set --no-cone /data/03_labor/ /notes/ /env/ /data/change_my_name_to_ur_initials.xlsx
+git sparse-checkout set --no-cone /data/03_labor/ /data/06_emethods/ /notes/ /env/ /data/change_my_name_to_ur_initials.xlsx
 
 ```
 :::
