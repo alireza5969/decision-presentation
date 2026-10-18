@@ -10993,6 +10993,13 @@ Enter your username/handle + *Personal Access Token (PAT)*
 
 ---
 
+### Directory structure
+
+![](img/structure.png)
+
+
+---
+
 ## Step 6: `Annotator`
 
 ::: {.callout-warning}
