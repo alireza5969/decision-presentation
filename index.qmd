@@ -62,6 +62,7 @@ _> How many records can a model **remove**, before it removes a paper that is su
 Accuracy is a useless metric here. A model that rejects everything is 99% accurate and 100% useless. Say this out loud, it gets a laugh and it's true.
 :::
 
+
 ---
 
 ## How the study works
@@ -98,6 +99,20 @@ Decision models, not chatting models: e.g. `Jev`, `Tev1`, `Nimble`, `Clef`, `Cle
 - **One pass per request.** 
 - **Fast:** up to 100 decisions per minute. If you think LLMs are fast, wait to see these!
 :::
+
+
+
+---
+
+###
+
+
+![](img/jev.jpg)
+
+[A YouTube video about Jev in Farsi](https://youtu.be/mxijLTA5RTw?is=X2-8rvIHU-hmPEBZ)
+
+I already have it downloaded on Telegram. Just holler and I'll pass it along.
+
 
 ---
 
