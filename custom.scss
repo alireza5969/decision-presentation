@@ -137,3 +137,8 @@
   color: #166534;
   font-weight: 700;
 }
+
+.wrap-code pre code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}

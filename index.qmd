@@ -135,9 +135,29 @@ I'll show you in a video.
 
 ---
 
+### Mouse
+
+:::: {.columns}
+
+::: {.column width="33%"}
+![](img/mouse1.png)
+:::
+
+::: {.column width="33%"}
+![](img/mouse4.jpeg)
+:::
+
+::: {.column width="33%"}
+![](img/mouse5.jpg)
+:::
+
+::::
+
+---
+
 ### How does your side of things look like?
 
-![data extraction format](img/extraction_format.png)
+![+ PROSPERO and published protocol](img/extraction_format.png)
 
 ---
 
@@ -10913,16 +10933,18 @@ Then check your email for the project invitation, open it, and click **Accept in
 
 ---
 
-## Step 5: clone the project (download it in simpler termes)
+## Step 5: clone the project (download it in simpler terms)
 
-Pick **one** of these:
+This is only done once:
 
-::: {.incremental}
-1. The normal way:
-   `git clone https://github.com/alireza5969/decision-models-systematic-review-screening`
-2. If you authenticate with an `SSH` key (you probably don't)
-   `git clone git@github.com:alireza5969/decision-models-systematic-review-screening.git`
-3. The "I will deal with git later" way: [download the `.zip`](https://github.com/alireza5969/decision-models-systematic-review-screening/archive/refs/heads/main.zip) (you will have to work with `git` at the end!)
+::: {.code-overflow-wrap}
+
+``` bash
+git clone --depth 1 --filter=blob:none --sparse https://github.com/alireza5969/decision-models-systematic-review-screening
+cd repo
+git sparse-checkout set --no-cone /data/03_labor/ /notes/ /env/ /data/change_my_name_to_ur_initials.xlsx
+
+```
 :::
 
 ---
@@ -11057,9 +11079,11 @@ You can [highlight]{.mark} or [changed the color]{style="color: red"} of keyword
 
 ## Due
 
-We'll start by 5k papers each and you'll have 1 month to finish.
+start by ~ 5k papers each + you'll have 1 month to finish.
 
-Delay = removed from the
+It's much easier than data extraction. So, the expectation is not too far.
+
+Delay = removed from the project
 
 ---
 
