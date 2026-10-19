@@ -11095,7 +11095,30 @@ You can [highlight]{.mark} or [changed the color]{style="color: red"} of keyword
 
 ---
 
-## Let's do everything a few times
+If you want to change the highlighting color without my help, do the following. This will change the colors for [all the collaborators]{style="color: red"}.
+
+::: {incremental}
+
+1. Change the `kw_colors.csv` file inside `env/` to your liking.
+2. Copy and paste this into your `CMD` while you are inside the project:
+
+    ```bash
+    git add .
+    git commit -m "changed the highlighing colors"
+    git pull
+    # You need to enter your credentials now (your username + personal access token)
+    git push
+    # You need to enter your credentials again
+    ```
+3. Now, you wait for ~30-45 minutes (or maybe more. I haven't done it myself yet.) so GitHub's servers change the colors.
+4. Again, run `git pull`. It should show that something (in this case, the coloring) has changed.
+
+:::
+
+
+---
+
+## Let's have a look at some samples
 
 ![](img/show-me.jpeg)
 

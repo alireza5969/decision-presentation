@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-ffc9e1c410b9ee54859094c1baed11ca.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-6ac391a5efc37c9b81ca7103cb8a701f.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -304,7 +304,7 @@ flowchart LR
 <h3 id="section"></h3>
 
 <img data-src="img/jev.jpg" class="r-stretch"><p><a href="https://youtu.be/mxijLTA5RTw?is=X2-8rvIHU-hmPEBZ">A YouTube video about Jev in Farsi</a></p>
-<p>I already have downloaded it on Telegram. Just holler and I’ll pass it along.</p>
+<p>I already have it downloaded on Telegram. Just holler and I’ll pass it along.</p>
 </section>
 <section id="why-does-time-matter" class="slide level2">
 <h2>Why does time matter</h2>
@@ -21881,8 +21881,26 @@ decision_machine_clef_flash
 </blockquote>
 </div>
 </section>
-<section id="lets-do-everything-a-few-times" class="slide level2">
-<h2>Let’s do everything a few times</h2>
+<section class="slide level2">
+
+<p>If you want to change the highlighting color without my help, do the following. This will change the colors for <span style="color: red">all the collaborators</span>.</p>
+<div class="{incremental}">
+<ol type="1">
+<li class="fragment"><p>Change the <code>kw_colors.csv</code> file inside <code>env/</code> to your liking.</p></li>
+<li class="fragment"><p>Copy and paste this into your <code>CMD</code> while you are inside the project:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb4-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"changed the highlighing colors"</span></span>
+<span id="cb4-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span>
+<span id="cb4-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># You need to enter your credentials now (your username + personal access token)</span></span>
+<span id="cb4-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb4-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># You need to enter your credentials again</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li class="fragment"><p>Now, you wait for ~30-45 minutes so GitHub’s servers change the colors.</p></li>
+<li class="fragment"><p>Again, run <code>git pull</code>.</p></li>
+</ol>
+</div>
+</section>
+<section id="lets-have-a-look-at-some-samples" class="slide level2">
+<h2>Let’s have a look at some samples</h2>
 
 <img data-src="img/show-me.jpeg" class="r-stretch"></section>
 <section id="due" class="slide level2">
