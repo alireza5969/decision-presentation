@@ -152,6 +152,9 @@ I'll show you in a video.
 
 ### Mouse
 
+You ABSOLUTELY need a mouse. This work cannot be done with a touchpad.
+If you don't have a mouse already, just get your hands on one ASAP.
+
 :::: {.columns}
 
 ::: {.column width="33%"}
