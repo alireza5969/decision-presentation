@@ -11118,6 +11118,13 @@ If you want to change the highlighting color without my help, do the following. 
 
 :::
 
+::: {.callout-caution}
+
+## Do not abuse
+
+Don't just use it every time you add/change a keyword/color. This will massively increase the size pf the repo.
+Ask other colleagues and let the changes accumulate; then, do `git add .`, `git commit`, `git pull`, and `git push`.
+:::
 
 ---
 
