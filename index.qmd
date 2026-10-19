@@ -11113,8 +11113,8 @@ If you want to change the highlighting color without my help, do the following. 
     git push
     # You need to enter your credentials again
     ```
-3. Now, you wait for ~30-45 minutes (or maybe more. I haven't done it myself yet.) so GitHub's servers change the colors.
-4. Again, run `git pull`. It should show that something (in this case, the coloring) has changed.
+3. Now, you wait for ~1 hour so GitHub's servers change the colors.
+4. Again, run `git pull` to download the changes. It should show that something (in this case, the coloring) has changed.
 
 :::
 
