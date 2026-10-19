@@ -50,9 +50,14 @@ Finding the included papers among thousands of records is a **rare-event problem
 - A few records matter (the rare disease).
 - Missing one of them is far worse than reading ten extra.
 
+
+::: {.fragment}
+
 So the question is not "how accurate is the model?" It is:
 
 _> How many records can a model **remove**, before it removes a paper that is supposed to be in the final review?_
+
+:::
 
 ---
 
@@ -10864,7 +10869,11 @@ This study measures AI. A hallucinated number in our dataset becomes a hallucina
 - I am the **other co-first and the corresponding author**.
 - Probably two faculty members, from the US and Canada, will join.
 
+::: {.fragment}
+
 You can call me **<u>anytime, day and night</u>**. I won't call you anytime, unless you are a cool person.
+
+:::
 
 ---
 
@@ -10879,7 +10888,11 @@ Five steps, no genius required.
 4. Install `Annotator` on [**both**]{.mark} [Firefox](https://addons.mozilla.org/addon/annotator) and [Chrome](https://chromewebstore.google.com/detail/annotator/lodikfcpadhmibjmhoihgedpmjlhcjol).
 5. Clone the project and start labeling.
 
+::: {.fragment}
+
 **what are Git and GitHub?**
+
+:::
 
 ---
 
@@ -10888,8 +10901,12 @@ Five steps, no genius required.
 - **Git** is a version-control and *remote* collaboration system. It lives on your computer.
 - **GitHub** is where a Git project is stored online, so **everyone can reach the same copy**.
 
-![Local repository and remote repository](https://harshkapadia2.github.io/git_basics/static/img/git-local-remote.png){fig-alt="Diagram of a local Git repository connected to a remote repository" width="70%"}
 
+::: {.fragment}
+
+![](https://harshkapadia2.github.io/git_basics/static/img/git-local-remote.png)
+
+:::
 
 ---
 
@@ -10925,8 +10942,11 @@ What Git does about it:
 1. [Sign up on GitHub](https://github.com/signup).
 2. Send me your *GitHub handle* (mine is `*github.com/alireza5969*`) so I can add you to the project. The project is now private and closed-sorced, but will be made open-sources upon submission. We will publish the code and data along with the paper for the sake of reproducibility.
 
+::: {.fragment}
+
 Pick a handle you will not be embarrassed to see on a published paper's acknowledgements. `sexydoc69` & `iLoveSadeghi` is are good choices.
 
+:::
 ---
 
 ## Step 3: install Git
@@ -10936,8 +10956,11 @@ Pick a handle you will not be embarrassed to see on a published paper's acknowle
 - Keep the **default installation options**.
 - In particular, keep **Git Credential Manager** enabled if the installer offers it.
 
-That is it. Click "Next" like you do for everything else. 
+::: {.fragment}
 
+That is it. Click "Next" like you do for everything else.
+
+:::
 ---
 
 ## Step 4: connect Git to GitHub
@@ -11060,11 +11083,14 @@ All you need to do is to [*highlight*]{.mark} the info. You'll get to export the
 5. **Every day**, push your progress to the remote after each day of labeling:
 :::
 
+::: {.fragment}
 
 ::: {.callout-caution}
 ## Danger.
 
 Do not erase your browser history in the meanwhile! All your extract would be gone!
+
+:::
 
 :::
 
@@ -11118,12 +11144,16 @@ If you want to change the highlighting color without my help, do the following. 
 
 :::
 
+::: {.fragment}
+
 ::: {.callout-caution}
 
 ## Do not abuse
 
 Don't just use it every time you add/change a keyword/color. This will massively increase the size pf the repo.
 Ask other colleagues and let the changes accumulate; then, do `git add .`, `git commit`, `git pull`, and `git push`.
+:::
+
 :::
 
 ---
