@@ -11158,6 +11158,12 @@ Ask other colleagues and let the changes accumulate; then, do `git add .`, `git 
 
 ---
 
+If you need to open the article's PMC web page (for example, to get a Supplementary Material):
+
+![](img/open_pmc.png)
+
+---
+
 ## Let's have a look at some samples
 
 ![](img/show-me.jpeg)
