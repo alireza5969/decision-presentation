@@ -10983,6 +10983,10 @@ git sparse-checkout set --no-cone /data/03_labor/ /data/06_emethods/ /notes/ /en
 ```
 :::
 
+Enter the above commands after you did this:
+
+![](img/cmd.png)
+
 ---
 
 You'll encounter a view like this:
@@ -11005,7 +11009,7 @@ Enter your username/handle + *Personal Access Token (PAT)*
 
 ### Where do I get a PAT?
 
-![Go to Settings in your GH account](img/pat1.png)
+![You probably won't need it. So, first try other things, if you failed, come back to this slide.](img/pat1.png)
 
 ---
 
