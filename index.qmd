@@ -19,14 +19,7 @@ format:
     fig-responsive: false
 ---
 
-<!--
-  Optional custom.scss (put it next to this file). If you don't want it,
-  change `theme: [simple, custom.scss]` above to `theme: simple`.
-
-  /*-- scss:rules --*/
-  .reveal img { max-height: 420px; }
-  .reveal blockquote { font-size: 0.85em; }
--->
+*If you want to see this slide show in scrollable view, press "E" on your keyboard.*
 
 ## Why you are here {.smaller}
 
