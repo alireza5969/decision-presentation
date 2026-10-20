@@ -10976,7 +10976,7 @@ This is only done once:
 ::: {.code-overflow-wrap}
 
 ``` bash
-git clone --depth 1 --filter=blob:none --sparse https://github.com/alireza5969/dmsr-data
+git clone --depth 1 --filter=blob:none --sparse https://github.com/alireza5969/dmsr-data.git
 cd repo
 git sparse-checkout set --no-cone /data/03_labor/ /data/06_emethods/ /notes/ /env/ /data/change_my_name_to_ur_initials.xlsx
 
