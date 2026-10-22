@@ -10978,12 +10978,12 @@ This is only done once:
 ``` bash
 git clone --depth 1 --filter=blob:none --sparse https://github.com/alireza5969/dmsr-data.git
 cd dmsr-data
-git sparse-checkout set --no-cone /data/03_labor/ /data/06_emethods/ /notes/ /env/ /data/change_my_name_to_ur_initials.xlsx
+git sparse-checkout set --no-cone /data/03_labor/ /data/06_emethods/ /notes/ /env/ /data/ labeling_jsons/ change_my_name_to_ur_initials.xlsx
 
 ```
 :::
 
-Literally, change `change_my_name_to_ur_initials` to your initials! For example: change it to `mas` if you are Shahla, `ajk` if you are Jamshid, and `kf` if you are Fala.
+Seriously, **change 'change_my_name_to_ur_initials' to your initials** *before* running the code above! For example: change it to `mas` if you are Shahla, `ajk` if you are Jamshid, and `kf` if you are Fala.
 
 Enter the above commands after you did this:
 
