@@ -11102,10 +11102,12 @@ Do not erase your browser history in the meanwhile! All your extract would be go
 :::
 
 ```bash
+
+git pull
 git add .
 git commit -m "daily labels"
-git pull
 git push
+
 ```
 
 [Daily means daily. We need to get this piece to publication ASAP.]{.fragment .highlight-yellow style="font-size: 30px;"}
