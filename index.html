@@ -21964,10 +21964,17 @@ decision_machine_clef_flash
 <section class="slide level2">
 
 <h3 id="kimia">Kimia</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--filter</span><span class="op">=</span>blob:none <span class="at">--sparse</span> https://github.com/alireza5969/dmsr-supp.git</span>
-<span id="cb7-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> dmsr-supp</span>
-<span id="cb7-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> sparse-checkout init <span class="at">--cone</span></span>
-<span id="cb7-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> sparse-checkout set data/17501-18000 data/18001-18500 data/18501-19000 data/19001-19500 data/19501-20000 data/20001-20500 data/20501-21000 data/21001-21500 data/21501-22000 data/22001-22500 data/22501-23000 data/23001-23500 data/23501-24000</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> http.version HTTP/1.1</span>
+<span id="cb7-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> http.postBuffer 524288000</span>
+<span id="cb7-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> http.lowSpeedLimit 0</span>
+<span id="cb7-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> http.lowSpeedTime 999999</span>
+<span id="cb7-7"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--filter</span><span class="op">=</span>blob:none <span class="at">--sparse</span> https://github.com/alireza5969/dmsr-supp.git</span>
+<span id="cb7-9"><a href="" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> dmsr-supp</span>
+<span id="cb7-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> sparse-checkout init <span class="at">--cone</span></span>
+<span id="cb7-11"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> sparse-checkout set data/17501-18000 data/18001-18500 data/18501-19000 data/19001-19500 data/19501-20000 data/20001-20500 data/20501-21000 data/21001-21500 data/21501-22000 data/22001-22500 data/22501-23000 data/23001-23500 data/23501-24000</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
